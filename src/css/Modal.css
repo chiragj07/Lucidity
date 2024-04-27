@@ -1,0 +1,61 @@
+.modal-container{
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  padding: 24px;
+  background-color: #282B27; 
+  border-radius: 12px;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px); 
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content span{
+  margin-top: 12px;
+}
+
+.input-field-containers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px
+}
+
+.modal-actions{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.modal-container p{
+  cursor: pointer;
+  color: #CEED51;
+}
+.save-button{
+  background-color: #CEED51;
+  padding: 4px 8px;
+  border: none;
+  color: #282B27;
+  border-radius: 4px;
+  cursor: pointer;
+}

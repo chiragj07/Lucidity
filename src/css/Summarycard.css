@@ -1,0 +1,34 @@
+
+.summary-card-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+}
+.summary-card{
+  display: flex;
+  gap:12px;
+  border: 1px solid #243325;
+  width: 200px;
+  background-color: #243325;
+  border-radius: 4px;
+  padding: 8px 16px;
+  align-items: flex-start;
+}
+
+.summary-card-data{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-card-title{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.summary-card-value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
