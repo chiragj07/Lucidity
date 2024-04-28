@@ -16,7 +16,7 @@ interface InventoryInterface{
 const ActionCell = ({disableToggle, rowData, deleteRow, isAdmin, setShowModal}: {isAdmin: boolean, disableToggle: (val: string) => void, deleteRow: (val: string) => void, rowData: InventoryInterface, setShowModal: ({state, data}: {state: boolean, data: InventoryInterface}) => void}) => {
   return (
     <div className='action-cell'>
-     <EditIcon onClick= {() => isAdmin && setShowModal({state: true, data: rowData})} style={{cursor: isAdmin ? "pointer" : "not-allowed", color: isAdmin ? "#387C21" : "gray"}} />
+     <EditIcon onClick= {() => (isAdmin && !rowData.isDisabled ) && setShowModal({state: true, data: rowData})} style={{cursor: (isAdmin && !rowData.isDisabled ) ? "pointer" : "not-allowed", color: (isAdmin && !rowData.isDisabled ) ? "#387C21" : "gray"}} />
      { !rowData.isDisabled ?  <VisibilityIcon onClick={() => disableToggle(rowData.name)} style={{cursor: isAdmin ? "pointer": "not-allowed", color: isAdmin ? "#A47EB0": "gray"}} /> : <VisibilityOffIcon onClick={() => disableToggle(rowData.name)} style={{cursor: "pointer", color: "#A47EB0"}} />}
      <DeleteIcon onClick = {() => deleteRow(rowData.name)} style={{cursor: isAdmin ? "pointer": "not-allowed", color: isAdmin ? "#EA3323" : "gray"}}/>
     </div>

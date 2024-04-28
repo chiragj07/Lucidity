@@ -34,7 +34,7 @@ const SummaryCardsContainer = ({inventoryData} : {inventoryData : InventoryInter
       })
 
       setData({
-        totalProducts: inventoryData.length,
+        totalProducts: inventoryData.filter(item => !item.isDisabled).length,
         totalStoreValue: value,
         outOfStock: zeroQuantity,
         noOfCategory: cateCount.size
